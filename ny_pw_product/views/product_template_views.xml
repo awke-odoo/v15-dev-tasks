@@ -7,14 +7,10 @@
     <field name="arch" type="xml">
       <xpath
         expr="//group[@name='group_standard_price']/label"
-        position="inside"
+        position="before"
       >
         <field name="pair_per_case" />
         <field name="price_per_pair" />
-        <!-- <field
-          name="list_price"
-          attrs="{'readonly': [('price_per_pair', '!=', False), ('pair_per_case', '!=', False)]}"
-        /> -->
       </xpath>
       <xpath expr="//field[@name='list_price']" position="attributes">
         <attribute name="attrs"

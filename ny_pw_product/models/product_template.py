@@ -6,7 +6,6 @@ class ProductTemplate(models.Model):
   pair_per_case = fields.Integer(string="Pair Per Case")
   price_per_pair = fields.Monetary(string="Price Per Pair")
   list_price = fields.Monetary(string="Sales Price", 
-        digits='Product Price',
         help="Price at which the product is sold to customers.", compute='_compute_list_price',
         store=True
       )
